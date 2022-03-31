@@ -6,10 +6,9 @@ TagManager:
   tags:
   - Monster
   - Pick
-  - Player1
-  - Player2
-  - Player3
-  - Player4
+  - WayPoint
+  - PlayerInGame
+  - PlayerDead
   layers:
   - Default
   - TransparentFX
