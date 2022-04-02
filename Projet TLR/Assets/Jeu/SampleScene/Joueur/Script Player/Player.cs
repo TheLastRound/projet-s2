@@ -31,7 +31,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         // Liste des joueurs dans la game (possibilité de la récupérer et de calculer sa longueur pour définir une parti finis)
         public List<GameObject> players;
-        private GameObject[] player;
+        public static GameObject[] player;
 
         // Multijoueur Inventaire de soin
         public GameObject[] Heal;
@@ -98,7 +98,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
                     inputJump = Input.GetKey(KeyCode.Space);
                 }
             }
-            else if (!view.IsMine)
+            else if (view.IsMine)
             {
                 horizontal = Input.GetAxis("Horizontal");
                 vertical = Input.GetAxis("Vertical");
@@ -128,7 +128,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
                     isGrounded = false;
                 }
             }
-            else if (!view.IsMine)  
+            else if (view.IsMine)  
             {
                 if (inputJump && isGrounded)
                 {
@@ -142,7 +142,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         {
             isGrounded = true;
             
-            if(collision.gameObject.tag == "Monster")
+            if(collision.gameObject.tag == "Monster" && state2 != Player.State.DEAD)
             {
                 state2 = Player.State.DEAD;
                 BasicAI.state = BasicAI.State.PATROL;

@@ -266,9 +266,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 6704061989131873743, guid: 11e14f0b284dcd748a8fb1cf7329ace2, type: 3}
   minX: -72.4621
-  maxX: -74.4
+  maxX: -84.4
   minY: 34.7195
-  maxY: 39
+  maxY: 34
   minZ: -75.90032
   maxZ: -75.90032
 --- !u!4 &223974228
