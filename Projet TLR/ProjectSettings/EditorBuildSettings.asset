@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Jeu/SampleScene/Map.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Multijoueur/SampleScenes/LoadingScreen.unity
+    guid: 69ccb47d97006864c96b7e3cbd7531c9
+  - enabled: 1
+    path: Assets/Multijoueur/SampleScenes/Lobby.unity
+    guid: 8848865b81874964a9b768fe33df0d6a
   m_configObjects: {}
