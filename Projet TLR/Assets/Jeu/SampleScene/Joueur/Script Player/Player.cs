@@ -81,7 +81,24 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         void Update()
         {
-            if (!view.IsMine || player.Length == 1 )
+            if (player.Length == 1)
+            {
+                horizontal = Input.GetAxis("Horizontal");
+                vertical = Input.GetAxis("Vertical");
+                transform.Translate(Vector3.forward * walk * vertical * Time.deltaTime);
+                transform.Translate(Vector3.right * walk * horizontal * Time.deltaTime);
+                if (Input.GetKey(KeyCode.LeftShift))
+                {
+                    transform.Translate(Vector3.forward * run * vertical * Time.deltaTime);
+                    transform.Translate(Vector3.right * run * horizontal * Time.deltaTime);
+                }
+
+                if (!inputJump && isGrounded)
+                {
+                    inputJump = Input.GetKey(KeyCode.Space);
+                }
+            }
+            else if (!view.IsMine)
             {
                 horizontal = Input.GetAxis("Horizontal");
                 vertical = Input.GetAxis("Vertical");
@@ -102,7 +119,16 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         void FixedUpdate()
         
         {
-            if (!view.IsMine)
+            if (player.Length == 1)
+            {
+                if (inputJump && isGrounded)
+                {
+                    rb.AddForce(Vector3.up * 3.5f, ForceMode.Impulse);
+                    inputJump = false;
+                    isGrounded = false;
+                }
+            }
+            else if (!view.IsMine)  
             {
                 if (inputJump && isGrounded)
                 {
