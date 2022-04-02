@@ -106,15 +106,15 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.5
-    agentHeight: 2
-    agentSlope: 40.3
-    agentClimb: 1.5
+    agentRadius: 0.6
+    agentHeight: 2.5
+    agentSlope: 24
+    agentClimb: 0.75
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.16666667
+    cellSize: 0.2
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -325,23 +325,23 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1918369105}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: ebf3ae38bc10a554b8f1001698d3b030, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ebf3ae38bc10a554b8f1001698d3b030, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 340.91
+      value: 0.010009766
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ebf3ae38bc10a554b8f1001698d3b030, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 70.86
+      value: -1.6399994
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ebf3ae38bc10a554b8f1001698d3b030, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 52.1
+      value: 0.5999985
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ebf3ae38bc10a554b8f1001698d3b030, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1763,8 +1763,9 @@ Transform:
   - {fileID: 444745705}
   - {fileID: 1256504671}
   - {fileID: 982667748}
+  - {fileID: 1918369105}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &579592212
 MonoBehaviour:
@@ -4053,7 +4054,7 @@ GameObject:
   - component: {fileID: 1574185698}
   m_Layer: 0
   m_Name: Waypoints
-  m_TagString: WayPoint
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5311,13 +5312,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1918369102}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 340.9, y: 72.5, z: 51.5}
+  m_LocalPosition: {x: 425.3, y: 37.56, z: 104.434}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 81178716}
   - {fileID: 28700995}
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  - {fileID: 1402615053}
+  m_Father: {fileID: 579592211}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1941435702
 GameObject:
