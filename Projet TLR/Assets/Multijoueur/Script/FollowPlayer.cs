@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         void Start()
         {
             player = Player.player[Player.player.Length - 1];
+            Debug.Log(Player.player.Length);
             decalage = new Vector3(0, 1.5f, 0);
         }
 

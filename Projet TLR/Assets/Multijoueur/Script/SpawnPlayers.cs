@@ -19,12 +19,13 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         public float maxY;
         public float minZ;
         public float maxZ;
-        private void Start()
+
+        public static Vector3 randomPosition;
+        public void Start()
         {
-            Vector3 randomPoisition = new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), Random.Range(minZ, maxZ));
-            GameObject p = PhotonNetwork.Instantiate(playerPrefab.name, randomPoisition, Quaternion.identity);
-            
-            PhotonNetwork.Instantiate(cameraPrefab.name, randomPoisition, Quaternion.identity);
+            randomPosition = new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), Random.Range(minZ, maxZ));
+            PhotonNetwork.Instantiate(playerPrefab.name, randomPosition, Quaternion.identity);
+            PhotonNetwork.Instantiate(cameraPrefab.name, randomPosition, Quaternion.identity);
 
         }
     }

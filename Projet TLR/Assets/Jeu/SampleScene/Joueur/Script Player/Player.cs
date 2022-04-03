@@ -52,6 +52,13 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             view = GetComponent<PhotonView>();
 
             StartCoroutine("FSM");
+            
+            player = GameObject.FindGameObjectsWithTag("PlayerInGame");
+            players = new List<GameObject>();
+            for (int i = 0; i < player.Length; i++)
+            {
+                players.Add(player[i]);
+            }
 
         }
 
@@ -78,12 +85,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         }
         void Update()
         {
-            player = GameObject.FindGameObjectsWithTag("PlayerInGame");
-            players = new List<GameObject>();
-            for (int i = 0; i < player.Length; i++)
-            {
-                players.Add(player[i]);
-            }
             y = Input.GetAxis("Mouse X");
             rotateValue = new Vector3(0, -y, 0);
             transform.eulerAngles = transform.eulerAngles - rotateValue;

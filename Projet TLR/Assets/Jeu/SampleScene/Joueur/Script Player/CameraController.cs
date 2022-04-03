@@ -2,7 +2,8 @@ using System;
 using UnityEngine;
 using System.Collections;
 
-
+namespace UnityStandardAssets.Characters.ThirdPerson
+{
     public class CameraController : MonoBehaviour
     {
         //Rotation Camera
@@ -40,4 +41,4 @@ using System.Collections;
     
         }
     }
-
+}
