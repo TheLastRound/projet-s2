@@ -37,7 +37,12 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         public GameObject[] Heal;
         private int heal;
         private PhotonView view;
-
+        
+        //Rotation player
+        private float x;
+        private float y;
+        private Vector3 rotateValue;
+        
         void Start()
         {
             rb = GetComponent<Rigidbody>();
@@ -78,27 +83,13 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
             }
         }
-
         void Update()
         {
-            if (player.Length == 1)
-            {
-                horizontal = Input.GetAxis("Horizontal");
-                vertical = Input.GetAxis("Vertical");
-                transform.Translate(Vector3.forward * walk * vertical * Time.deltaTime);
-                transform.Translate(Vector3.right * walk * horizontal * Time.deltaTime);
-                if (Input.GetKey(KeyCode.LeftShift))
-                {
-                    transform.Translate(Vector3.forward * run * vertical * Time.deltaTime);
-                    transform.Translate(Vector3.right * run * horizontal * Time.deltaTime);
-                }
-
-                if (!inputJump && isGrounded)
-                {
-                    inputJump = Input.GetKey(KeyCode.Space);
-                }
-            }
-            else if (view.IsMine)
+            y = Input.GetAxis("Mouse X");
+            rotateValue = new Vector3(x, 0, 0);
+            transform.eulerAngles = transform.eulerAngles - rotateValue;
+            
+            if (player.Length == 1 || view.IsMine)
             {
                 horizontal = Input.GetAxis("Horizontal");
                 vertical = Input.GetAxis("Vertical");
@@ -119,16 +110,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         void FixedUpdate()
         
         {
-            if (player.Length == 1)
-            {
-                if (inputJump && isGrounded)
-                {
-                    rb.AddForce(Vector3.up * 3.5f, ForceMode.Impulse);
-                    inputJump = false;
-                    isGrounded = false;
-                }
-            }
-            else if (view.IsMine)  
+            if (player.Length == 1 || view.IsMine)
             {
                 if (inputJump && isGrounded)
                 {

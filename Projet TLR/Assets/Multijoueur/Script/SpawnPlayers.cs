@@ -11,6 +11,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
     public class SpawnPlayers : MonoBehaviour
     {
         public GameObject playerPrefab;
+        public GameObject cameraPrefab;
 
         public float minX;
         public float maxX;
@@ -21,16 +22,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         private void Start()
         {
             Vector3 randomPoisition = new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), Random.Range(minZ, maxZ));
-            GameObject MyPlayer = PhotonNetwork.Instantiate(playerPrefab.name, randomPoisition, Quaternion.identity);
-            GameObject camera = GameObject.FindWithTag("MainCamera");
-            if (camera != null)
-            {
-                CameraController followScript = camera.GetComponent("CameraController") as CameraController;
-                if (followScript != null)
-                {
-                    followScript.target = MyPlayer;
-                }
-            }
+            PhotonNetwork.Instantiate(playerPrefab.name, randomPoisition, Quaternion.identity);
+            PhotonNetwork.Instantiate(cameraPrefab.name, randomPoisition, Quaternion.identity);
 
         }
     }
