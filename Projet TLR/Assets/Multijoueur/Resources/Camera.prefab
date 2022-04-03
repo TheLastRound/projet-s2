@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1893041485685287739}
   - component: {fileID: 6805631287907300490}
   - component: {fileID: 788825037978913511}
+  - component: {fileID: -201698149189968632}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -120,7 +121,8 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: -201698149189968632}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -138,6 +140,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walk: 2.5
   run: 3.5
+--- !u!114 &-201698149189968632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531465941993497533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8efc6b1d64977384eb3405357896c656, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PositionModel:
+    SynchronizeEnabled: 1
+    TeleportEnabled: 1
+    TeleportIfDistanceGreaterThan: 3
+    InterpolateOption: 2
+    InterpolateMoveTowardsSpeed: 1
+    InterpolateLerpSpeed: 1
+    ExtrapolateOption: 0
+    ExtrapolateSpeed: 1
+    ExtrapolateIncludingRoundTripTime: 1
+    ExtrapolateNumberOfStoredPositions: 1
+  m_RotationModel:
+    SynchronizeEnabled: 0
+    InterpolateOption: 1
+    InterpolateRotateTowardsSpeed: 180
+    InterpolateLerpSpeed: 5
+  m_ScaleModel:
+    SynchronizeEnabled: 0
+    InterpolateOption: 0
+    InterpolateMoveTowardsSpeed: 1
+    InterpolateLerpSpeed: 0
 --- !u!1 &2286038152003194639
 GameObject:
   m_ObjectHideFlags: 0
