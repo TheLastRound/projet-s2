@@ -12,7 +12,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
     {
         public GameObject playerPrefab;
         public GameObject cameraPrefab;
-
         public float minX;
         public float maxX;
         public float minY;
@@ -24,6 +23,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             Vector3 randomPoisition = new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), Random.Range(minZ, maxZ));
             PhotonNetwork.Instantiate(playerPrefab.name, randomPoisition, Quaternion.identity);
             PhotonNetwork.Instantiate(cameraPrefab.name, randomPoisition, Quaternion.identity);
+            
 
         }
     }

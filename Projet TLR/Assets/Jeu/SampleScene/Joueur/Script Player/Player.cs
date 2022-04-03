@@ -86,7 +86,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         void Update()
         {
             y = Input.GetAxis("Mouse X");
-            rotateValue = new Vector3(x, 0, 0);
+            rotateValue = new Vector3(0, -y, 0);
             transform.eulerAngles = transform.eulerAngles - rotateValue;
             
             if (player.Length == 1 || view.IsMine)

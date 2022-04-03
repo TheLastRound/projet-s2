@@ -488,6 +488,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   createInput: {fileID: 1024265179}
   joinInput: {fileID: 1143361515}
+  monsterPrefabs: {fileID: 1859602273905344335, guid: 97c19117af800cc458520d3fe4c41dbf, type: 3}
 --- !u!4 &633726969
 Transform:
   m_ObjectHideFlags: 0
