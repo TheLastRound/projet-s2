@@ -89,39 +89,27 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             rotateValue = new Vector3(x, 0, 0);
             transform.eulerAngles = transform.eulerAngles - rotateValue;
             
-            if (player.Length == 1)
+            if (player.Length == 1 || view.IsMine)
             {
-                horizontal = Input.GetAxis("Horizontal");
-                vertical = Input.GetAxis("Vertical");
-                transform.Translate(Vector3.forward * walk * vertical * Time.deltaTime);
-                transform.Translate(Vector3.right * walk * horizontal * Time.deltaTime);
-                if (Input.GetKey(KeyCode.LeftShift))
-                {
-                    transform.Translate(Vector3.forward * run * vertical * Time.deltaTime);
-                    transform.Translate(Vector3.right * run * horizontal * Time.deltaTime);
-                }
-
-                if (!inputJump && isGrounded)
-                {
-                    inputJump = Input.GetKey(KeyCode.Space);
-                }
+                Move();
             }
-            else if (view.IsMine)
-            {
-                horizontal = Input.GetAxis("Horizontal");
-                vertical = Input.GetAxis("Vertical");
-                transform.Translate(Vector3.forward * walk * vertical * Time.deltaTime);
-                transform.Translate(Vector3.right * walk * horizontal * Time.deltaTime);
-                if (Input.GetKey(KeyCode.LeftShift))
-                {
-                    transform.Translate(Vector3.forward * run * vertical * Time.deltaTime);
-                    transform.Translate(Vector3.right * run * horizontal * Time.deltaTime);
-                }
+        }
 
-                if (!inputJump && isGrounded)
-                {
-                    inputJump = Input.GetKey(KeyCode.Space);
-                }
+        private void Move()
+        {
+            horizontal = Input.GetAxis("Horizontal");
+            vertical = Input.GetAxis("Vertical");
+            transform.Translate(Vector3.forward * walk * vertical * Time.deltaTime);
+            transform.Translate(Vector3.right * walk * horizontal * Time.deltaTime);
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                transform.Translate(Vector3.forward * run * vertical * Time.deltaTime);
+                transform.Translate(Vector3.right * run * horizontal * Time.deltaTime);
+            }
+
+            if (!inputJump && isGrounded)
+            {
+                inputJump = Input.GetKey(KeyCode.Space);
             }
         }
         void FixedUpdate()
