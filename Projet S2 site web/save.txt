@@ -1,0 +1,37 @@
+<div class="center">
+        <div class="box">
+            <div class="green" id="myData1">Name :</div><input type="text" id="textbox" name="plat1" />
+
+        </div>
+
+
+    </div>
+
+
+<form id="quiz" name="quiz">
+
+
+     
+        <div id="container">
+            <button class="learn-more">
+                <span class="circle" aria-hidden="true">
+                    <span class="icon arrow"></span>
+                </span>
+                <span class="button-text">Learn More</span>
+            </button>
+        </div>
+    </form>
+
+
+
+<button class="learn-more">
+                            <span class="circle" aria-hidden="true">
+
+                            </span>
+                            <span class="button-text">Learn More</span>
+                        </button>
+
+
+<a href=./Specialite/Ramen/Ramen.html title="ramen">
+                    <img alt="exemple de texte alternatif" src=https://www.thuisbezorgd.nl/foodwiki/uploads/2017/05/ramen-3-e1511359817885-1080x1080.jpg width="130" height="100" />
+                </a>

@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Monster
+  - Pick
+  - WayPoint
+  - PlayerInGame
+  - PlayerDead
   layers:
   - Default
   - TransparentFX
