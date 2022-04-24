@@ -1,15 +1,15 @@
 fileFormatVersion: 2
-guid: 4b80747d1d11ec74e968600fac94ca27
+guid: dedf26248610bf24482eccdc61ec2c27
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
-  fontSize: 300
-  forceTextureCase: -1
+  fontSize: 16
+  forceTextureCase: -2
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Kickback
+  - COFFETE
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

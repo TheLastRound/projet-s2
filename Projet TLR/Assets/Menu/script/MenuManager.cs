@@ -28,14 +28,7 @@ public class MenuManager : MonoBehaviour
         frame0_cam.gameObject.SetActive(false);
         frame1_cam.gameObject.SetActive(true);
     }
-    private void back()
-    {
-        frame1.SetActive(true);
-        frame2.SetActive(false);
-        ES.SetSelectedGameObject(startbut);
-        frame0_cam.gameObject.SetActive(true);
-        frame1_cam.gameObject.SetActive(false);
-    }
+    
     public void Credits()
     {
         frame2.SetActive(false);
