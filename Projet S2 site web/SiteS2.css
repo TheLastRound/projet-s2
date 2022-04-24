@@ -1,0 +1,145 @@
+body {
+    background-color: black;
+    
+    
+    color: white;
+}
+.background {
+    height: 100%;
+    width: 177.778vh;
+    min-width: 100%;
+    min-height: 56.25vw;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    background-image: url('image/FOND2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+}
+.button-play {
+    -webkit-text-size-adjust: 100%;
+    color: #fff;
+    font-family: Roboto,sans-serif;
+    font-size: 1.6em;
+    line-height: 1.4;
+    text-align: center;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    padding-left: .5rem;
+    padding-right: .5rem;
+   
+}
+.button:hover {
+    background-color: rgba(0,0,0,.5);
+}
+.button {
+    -webkit-text-size-adjust: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    padding: 1rem 1.2rem;
+    background: transparent;
+    border: 1px solid;
+    border-radius: 0;
+    font-size: 1.3em;
+    line-height: 1.1;
+    color: inherit;
+    font-family: Fixture,sans-serif;
+    font-stretch: condensed;
+    font-weight: 400;
+    letter-spacing: .05em;
+    text-shadow: 1px 1px 10px hsla(0,0%,100%,.25),-1px -1px 10px hsla(0,0%,100%,.25);
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: text-shadow .8s cubic-bezier(.5,.18,.115,.87);
+    cursor: pointer;
+    display: inline-block;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    margin-bottom: 1.5rem;
+    background-color: rgba(0,0,0,.3);
+}
+
+.bandeau {
+    width: 100%;
+    height: 60px;
+    font-family: Roboto,sans-serif;
+    
+    background-color: #212121;
+    -webkit-text-size-adjust: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 500;
+}
+
+
+.loghaut {
+    padding-left: 15px;
+    
+    
+}
+
+.logo {
+    float:left;
+    -webkit-text-size-adjust: 100%;
+    color: #fff;
+    font-family: Roboto,sans-serif;
+    font-size: 1.6em;
+    line-height: 1.4;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    flex-grow: 1;
+    flex-basis: 30rem;
+    flex-shrink: 1;
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    padding-right: 1.5rem;
+}
+
+.menu {
+    float:right;
+    margin-right:40%;
+    -webkit-text-size-adjust: 100%;
+    color: #fff;
+    font-family: Roboto,sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    box-sizing: border-box;
+    margin-top:1%;
+    -webkit-font-smoothing: antialiased;
+    flex-grow: 1;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.jeu {
+    font-family: Roboto,sans-serif;
+    text-decoration: none;
+    
+    color:white;
+}
+.jeu:visited {
+     color: white;
+   }
+
+.jeu:hover{
+    color:red;
+}
+
+.bigbox{
+    margin-left:43%;
+    
+}
+
+.logothings{
+    padding-top:15%;
+}
+
+
+
+

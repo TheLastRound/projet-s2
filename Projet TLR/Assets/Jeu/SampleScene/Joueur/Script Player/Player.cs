@@ -78,20 +78,24 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         void Update()
         {
-            horizontal = Input.GetAxis("Horizontal");
-            vertical = Input.GetAxis("Vertical");
-            transform.Translate(Vector3.forward * walk * vertical * Time.deltaTime);
-            transform.Translate(Vector3.right * walk * horizontal * Time.deltaTime);
-            if (Input.GetKey(KeyCode.LeftShift))
+            if (!Menu_manager.paused) 
             {
-                transform.Translate(Vector3.forward * run * vertical * Time.deltaTime);
-                transform.Translate(Vector3.right * run * horizontal * Time.deltaTime);
-            }
+                horizontal = Input.GetAxis("Horizontal");
+                vertical = Input.GetAxis("Vertical");
+                transform.Translate(Vector3.forward * walk * vertical * Time.deltaTime);
+                transform.Translate(Vector3.right * walk * horizontal * Time.deltaTime);
+                if (Input.GetKey(KeyCode.LeftShift))
+                {
+                    transform.Translate(Vector3.forward * run * vertical * Time.deltaTime);
+                    transform.Translate(Vector3.right * run * horizontal * Time.deltaTime);
+                }
 
-            if (!inputJump && isGrounded)
-            {
-                inputJump = Input.GetKey(KeyCode.Space);
+                if (!inputJump && isGrounded)
+                {
+                    inputJump = Input.GetKey(KeyCode.Space);
+                }
             }
+           
 
 
         }
